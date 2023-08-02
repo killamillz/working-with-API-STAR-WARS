@@ -1,0 +1,133 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(SoloistGradient-9LZL.otf);
+}
+
+body {
+  background-image: url("giphy.gif");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: myFirstFont;
+  color: #eee;
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 100px;
+  border-left: 100px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0px;
+}
+
+.header h3 {
+  color: goldenrod;
+  margin: 5px;
+}
+
+#page-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+img {
+  width: 400px;
+  height: 500px;
+  border-radius: 50%;
+  margin-top: 150px;
+  border: 3px solid goldenrod;
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: 1.5s;
+}
+
+img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(15, 12, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 3.2s;
+  z-index: 100;
+}
+
+img:hover {
+  border: 1px solid goldenrod;
+  transform: scale(1.1);
+}
+
+#list li {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+
+#btn h1:hover {
+  cursor: pointer;
+  font-size: 36px;
+}
+ 
+.details-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.details-modal-title button {
+  border: 0px;
+  font-family: myFirstFont;
+  color: #eee;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dropdown-content{
+  margin-top: 50px;
+  position: absolute;
+  display: none;
+}
+
+.show{ 
+  display: block;
+}
+
+#star {
+  font-size: 80px;
+}
+
+#wars {
+  font-size: 60px;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
